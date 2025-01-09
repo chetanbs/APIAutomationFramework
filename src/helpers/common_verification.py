@@ -17,5 +17,9 @@ def verify_json_key_not_null(key):
     assert key != 0, "Failed key is null"
 
 
+def verify_json_key_not_none(key):
+    assert key is not None
+
+
 def verify_json_key_gr_zero(key):
     assert key > 0, "Failed Key is not > 0"
