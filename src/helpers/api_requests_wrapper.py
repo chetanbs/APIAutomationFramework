@@ -25,13 +25,13 @@ def patch_requests(url, auth, headers, payload, in_json):
 
 def put_requests(url, auth, headers, payload, in_json):
     put_response_data = requests.put(url=url, headers=headers, auth=auth, data=json.dumps(payload))
-    if in_json:
+    if in_json==True:
         return put_response_data.json()
     return put_response_data
 
 
-def delete_requests(url, auth, headers, payload, in_json):
-    delete_response_data = requests.delete(url=url, headers=headers, auth=auth, data=json.dumps(payload))
+def delete_requests(url, auth, headers, in_json):
+    delete_response_data = requests.delete(url=url, headers=headers, auth=auth)
     if in_json:
         return delete_response_data.json()
     return delete_response_data

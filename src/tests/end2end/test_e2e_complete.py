@@ -22,5 +22,5 @@ class TestE2E(object):
     @allure.title("Test CRUD Operation Delete")
     @allure.description("Verify booking gets deleted with the booking ID and Token")
     def test_delete_booking_id(self, create_token, get_booking_id):
-        print(create_token(), get_booking_id())
+        print(create_token, get_booking_id)
 

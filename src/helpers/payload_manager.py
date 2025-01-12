@@ -37,14 +37,18 @@ def payload_update_booking():
     return payload
 
 
-def payload_create_token():
-    load_dotenv()
+def payload_update_booking_patch():
     payload = {
-        "username" : os.getenv("USERNAME"),
-        "password" : os.getenv("PASSWORD")
+        "firstname": "Test",
+        "lastname": "Python"
     }
     return payload
 
 
-
-
+def payload_create_token():
+    load_dotenv()
+    payload = {
+        "username" : os.getenv("USER"),
+        "password" : os.getenv("PASSWORD")
+    }
+    return payload

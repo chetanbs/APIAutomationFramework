@@ -14,7 +14,7 @@ class Utils(object):
 
     def common_headers_xml(self):
         headers = {
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/xml"
         }
         return headers
 
@@ -28,7 +28,7 @@ class Utils(object):
 
     def common_header_put_patch_delete_basic_auth(self, basic_auth_value):
         headers = {
-            "Content-Type" : "aplication/json",
+            "Content-Type" : "application/json",
             "Authorization" : "Basic " + str(basic_auth_value),
         }
         return headers
